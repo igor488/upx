@@ -1,0 +1,220 @@
+export default function CondoServiceLandingPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      {/* HERO */}
+      <section className="bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-600 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm mb-6 backdrop-blur-sm">
+              Plataforma inteligente para condomínios
+            </div>
+
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              CondoService
+            </h1>
+
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Organize serviços, conecte moradores e controle prestadores em uma única plataforma.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-blue-800 px-8 py-4 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
+                Solicitar Demonstração
+              </button>
+
+              <button className="border border-white/40 px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition">
+                Ver Funcionalidades
+              </button>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-6 text-sm text-blue-100">
+              <span>✔ Gestão de Serviços</span>
+              <span>✔ Chat Integrado</span>
+              <span>✔ Controle de Prestadores</span>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="bg-white rounded-3xl shadow-2xl p-6 text-gray-900">
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <h3 className="font-bold text-lg">Painel do Condomínio</h3>
+                  <p className="text-gray-500 text-sm">Controle total dos serviços</p>
+                </div>
+
+                <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl">
+                  🏢
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="p-4 bg-gray-100 rounded-2xl">
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium">Eletricista</span>
+                    <span className="text-green-600 font-semibold">Confirmado</span>
+                  </div>
+                  <p className="text-sm text-gray-500">Bloco B • Apartamento 203</p>
+                </div>
+
+                <div className="p-4 bg-gray-100 rounded-2xl">
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium">Encanador</span>
+                    <span className="text-yellow-600 font-semibold">Pendente</span>
+                  </div>
+                  <p className="text-sm text-gray-500">Bloco A • Apartamento 105</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="bg-blue-50 rounded-2xl p-4">
+                    <h4 className="text-3xl font-bold text-blue-700">52</h4>
+                    <p className="text-sm text-gray-500">Serviços</p>
+                  </div>
+
+                  <div className="bg-cyan-50 rounded-2xl p-4">
+                    <h4 className="text-3xl font-bold text-cyan-700">18</h4>
+                    <p className="text-sm text-gray-500">Prestadores</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-6 -left-6 bg-cyan-400 text-white p-5 rounded-3xl shadow-xl hidden lg:block">
+              <p className="font-bold text-2xl">+80%</p>
+              <p className="text-sm">Mais organização</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFÍCIOS */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Tudo que um condomínio precisa
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Centralize contratações, organize prestadores e facilite a comunicação entre moradores e administração.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🔒',
+                title: 'Mais Segurança',
+                desc: 'Controle total de quem entra no condomínio e quais serviços serão realizados.'
+              },
+              {
+                icon: '💬',
+                title: 'Chat Integrado',
+                desc: 'Moradores e prestadores negociam diretamente pela plataforma.'
+              },
+              {
+                icon: '📅',
+                title: 'Agendamentos',
+                desc: 'Prestadores podem definir data e horário dos serviços.'
+              },
+              {
+                icon: '📍',
+                title: 'Filtro por Região',
+                desc: 'Moradores visualizam apenas profissionais próximos.'
+              },
+              {
+                icon: '⭐',
+                title: 'Avaliações',
+                desc: 'Sistema preparado para reputação e feedbacks futuros.'
+              },
+              {
+                icon: '📊',
+                title: 'Dashboard Completo',
+                desc: 'Síndicos acompanham todas as movimentações em tempo real.'
+              }
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition"
+              >
+                <div className="text-5xl mb-6">{item.icon}</div>
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMO FUNCIONA */}
+      <section className="py-24 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Como funciona
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Fluxo simples. Sem complicação. Igual sistema bom tem que ser.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-4 gap-8">
+            {[
+              'Condomínio cria conta',
+              'Moradores fazem cadastro',
+              'Prestadores entram na plataforma',
+              'Serviços são contratados e organizados'
+            ].map((step, index) => (
+              <div key={index} className="bg-white rounded-3xl p-8 text-center shadow-sm">
+                <div className="w-16 h-16 mx-auto mb-6 bg-blue-700 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">
+                  {index + 1}
+                </div>
+
+                <h3 className="font-bold text-xl leading-relaxed">
+                  {step}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-blue-900 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-5xl font-bold mb-6">
+            Modernize seu condomínio hoje
+          </h2>
+
+          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+            Chega de grupos bagunçados e contratação desorganizada.
+            Centralize tudo em uma plataforma profissional.
+          </p>
+
+          <button className="bg-white text-blue-800 px-10 py-5 rounded-2xl text-lg font-bold shadow-lg hover:scale-105 transition">
+            Começar Agora
+          </button>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-gray-950 text-gray-400 py-10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between gap-6">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-3">
+              CondoService
+            </h3>
+            <p>
+              Plataforma de gerenciamento e contratação de serviços para condomínios.
+            </p>
+          </div>
+
+          <div className="flex gap-8 text-sm">
+            <span>Contato</span>
+            <span>Funcionalidades</span>
+            <span>Privacidade</span>
+            <span>Suporte</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
